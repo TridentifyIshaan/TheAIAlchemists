@@ -33,5 +33,10 @@ def submit():
     contact_us.add_entry(name, email, message)
     return "Thank you for your message!"
 
-if __name__ == '__main__':
+@app.route('/entries')
+def entries():
+    entries = contact_us.get_entries()
+    return render_template('entries.html', entries=entries)
+
+if __name__ == '__main__': 
     app.run(debug=True)

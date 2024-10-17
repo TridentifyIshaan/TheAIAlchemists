@@ -6,7 +6,8 @@
     <title>Contact Us</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap'); /* New font import */
+
         * {
             margin: 0;
             padding: 0;
@@ -99,11 +100,18 @@
         .contact-form h2 {
             margin-bottom: 20px;
             text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
         }
 
         .contact-form label {
             display: block;
             margin-bottom: 5px;
+            font-size: 20px;
+            font-weight: 300;
+            color: #000000;
+            font-family: 'Roboto', sans-serif; /* New font family */
         }
 
         .contact-form input, .contact-form textarea {
@@ -131,6 +139,8 @@
             color: white;
             border-radius: 4px;
             cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
         }
 
         /* Hover Effect */
@@ -192,7 +202,7 @@
         <!-- Contact Form -->
         <div class="contact-form">
             <h2>Contact Us</h2>
-            <form>
+            <form action="/submit" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 
